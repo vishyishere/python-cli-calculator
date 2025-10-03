@@ -7,40 +7,52 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="calculator">
-    <h2>🚀 Calculator</h2>
-    <p class="subtitle">A tidy web calculator — demo for GitHub Pages</p>
-    <div class="display" id="display">0</div>
-    <div class="buttons">
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="toggleSign()">±</button>
-      <button onclick="percent()">%</button>
-      <button class="op" onclick="appendOperator('÷')">÷</button>
-      
-      <button onclick="appendNumber('7')">7</button>
-      <button onclick="appendNumber('8')">8</button>
-      <button onclick="appendNumber('9')">9</button>
-      <button class="op" onclick="appendOperator('×')">×</button>
-      
-      <button onclick="appendNumber('4')">4</button>
-      <button onclick="appendNumber('5')">5</button>
-      <button onclick="appendNumber('6')">6</button>
-      <button class="op" onclick="appendOperator('-')">−</button>
-      
-      <button onclick="appendNumber('1')">1</button>
-      <button onclick="appendNumber('2')">2</button>
-      <button onclick="appendNumber('3')">3</button>
-      <button class="op" onclick="appendOperator('+')">+</button>
-      
-      <button onclick="appendNumber('0')" class="zero">0</button>
-      <button onclick="appendNumber('.')">.</button>
-      <button class="eq" onclick="calculate()">=</button>
+  <div class="page">
+    <div class="calculator" role="application" aria-label="Calculator">
+      <header class="calc-head">
+        <div class="logo">🚀</div>
+        <div>
+          <h1>Calculator</h1>
+          <p class="subtitle">A tidy web calculator — demo for GitHub Pages</p>
+        </div>
+      </header>
+
+      <div class="display" id="display" aria-live="polite">0</div>
+
+      <div class="buttons" id="buttons">
+        <button data-fn="clear">C</button>
+        <button data-fn="toggle-sign">±</button>
+        <button data-fn="percent">%</button>
+        <button class="op" data-op="/">÷</button>
+
+        <button data-num="7">7</button>
+        <button data-num="8">8</button>
+        <button data-num="9">9</button>
+        <button class="op" data-op="*">×</button>
+
+        <button data-num="4">4</button>
+        <button data-num="5">5</button>
+        <button data-num="6">6</button>
+        <button class="op" data-op="-">−</button>
+
+        <button data-num="1">1</button>
+        <button data-num="2">2</button>
+        <button data-num="3">3</button>
+        <button class="op" data-op="+">+</button>
+
+        <button class="zero" data-num="0">0</button>
+        <button data-num=".">.</button>
+        <button class="eq" data-fn="equals">=</button>
+      </div>
+
+      <footer class="calc-foot">
+        <span>Made by <strong>Vishy</strong></span>
+        <span class="sep">|</span>
+        <a href="https://github.com/vishyishere/python-cli-calculator" target="_blank" rel="noopener">Source on GitHub</a>
+      </footer>
     </div>
-    <footer>
-      <p>Made by <b>Vishy</b> | <a href="https://github.com/vishyishere/python-cli-calculator" target="_blank">Source on GitHub</a></p>
-    </footer>
   </div>
-  
+
   <script src="app.js"></script>
 </body>
 </html>
