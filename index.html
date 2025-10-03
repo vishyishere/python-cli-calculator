@@ -1,11 +1,53 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Python CLI Calculator (Demo)</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculator — Python CLI Calculator Demo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🚀 Python CLI Calculator</h1>
-  <p>This is a static demo page for my Python calculator.</p>
-  <p>Code available on <a href="https://github.com/vishyishere/python-cli-calculator">GitHub</a></p>
+  <main class="wrap">
+    <header>
+      <h1>Calculator</h1>
+      <p class="muted">A small web calculator (JS) — demo for GitHub Pages</p>
+    </header>
+
+    <section class="calculator" aria-label="Calculator">
+      <div class="display" id="display" role="textbox" aria-readonly="true">0</div>
+
+      <div class="keys">
+        <button class="key function" data-action="clear">C</button>
+        <button class="key function" data-action="neg">±</button>
+        <button class="key function" data-action="percent">%</button>
+        <button class="key op" data-action="divide">÷</button>
+
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key op" data-action="multiply">×</button>
+
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key op" data-action="subtract">−</button>
+
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key op" data-action="add">+</button>
+
+        <button class="key wide" data-value="0">0</button>
+        <button class="key" data-value=".">.</button>
+        <button class="key equals" data-action="equals">=</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Code on <a href="https://github.com/vishyishere/python-cli-calculator" target="_blank" rel="noreferrer">GitHub</a></small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
