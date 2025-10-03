@@ -13,5 +13,3 @@ This project started as a **Python CLI calculator**, and now includes a **live w
 - Also includes the original **Python CLI script**
 
 ---
-
-## 📂 Project Structure
