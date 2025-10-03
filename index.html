@@ -1,4 +1,3 @@
-cat > index.html <<'HTML'
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,58 +7,40 @@ cat > index.html <<'HTML'
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="wrap">
-    <header class="top">
-      <div class="brand">
-        <span class="rocket">🚀</span>
-        <div>
-          <h1>Calculator</h1>
-          <p class="subtitle">A tidy web calculator — demo for GitHub Pages</p>
-        </div>
-      </div>
-    </header>
-
-    <section class="calculator" aria-label="Calculator">
-      <div class="display" id="display" role="textbox" aria-readonly="true">0</div>
-
-      <div class="keys" role="group" aria-label="Calculator keys">
-        <button class="key function" data-action="clear">C</button>
-        <button class="key function" data-action="neg">±</button>
-        <button class="key function" data-action="percent">%</button>
-        <button class="key op" data-action="divide">÷</button>
-
-        <button class="key" data-value="7">7</button>
-        <button class="key" data-value="8">8</button>
-        <button class="key" data-value="9">9</button>
-        <button class="key op" data-action="multiply">×</button>
-
-        <button class="key" data-value="4">4</button>
-        <button class="key" data-value="5">5</button>
-        <button class="key" data-value="6">6</button>
-        <button class="key op" data-action="subtract">−</button>
-
-        <button class="key" data-value="1">1</button>
-        <button class="key" data-value="2">2</button>
-        <button class="key" data-value="3">3</button>
-        <button class="key op" data-action="add">+</button>
-
-        <button class="key wide" data-value="0">0</button>
-        <button class="key" data-value=".">.</button>
-        <button class="key equals" data-action="equals">=</button>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-left">
-        <small>Made by <strong>Vishy</strong></small>
-      </div>
-      <div class="footer-right">
-        <small><a href="https://github.com/vishyishere/python-cli-calculator" target="_blank" rel="noreferrer">Source on GitHub</a></small>
-      </div>
+  <div class="calculator">
+    <h2>🚀 Calculator</h2>
+    <p class="subtitle">A tidy web calculator — demo for GitHub Pages</p>
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="toggleSign()">±</button>
+      <button onclick="percent()">%</button>
+      <button class="op" onclick="appendOperator('÷')">÷</button>
+      
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button class="op" onclick="appendOperator('×')">×</button>
+      
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button class="op" onclick="appendOperator('-')">−</button>
+      
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button class="op" onclick="appendOperator('+')">+</button>
+      
+      <button onclick="appendNumber('0')" class="zero">0</button>
+      <button onclick="appendNumber('.')">.</button>
+      <button class="eq" onclick="calculate()">=</button>
+    </div>
+    <footer>
+      <p>Made by <b>Vishy</b> | <a href="https://github.com/vishyishere/python-cli-calculator" target="_blank">Source on GitHub</a></p>
     </footer>
-  </main>
-
+  </div>
+  
   <script src="app.js"></script>
 </body>
 </html>
-HTML
